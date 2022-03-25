@@ -3,14 +3,15 @@ import { Link } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl"
 
 import logo from "../images/logo.png";
-import logo_sm from "../images/logo_sm.png";
 
 import { useMenu, useMenuUpdate } from "./context/menuContext";
+import {useStyle} from './context/styleContext'
 import OrderNow from './orderNow'
 
 const Header = (props) => {
   const menuState = useMenu();
   const toggleMenu = useMenuUpdate();
+  const style = useStyle()
 
   const intl = useIntl()
   const locale = intl.locale !== "en" ? `/${intl.locale}` : ""
@@ -22,22 +23,22 @@ const Header = (props) => {
     });
   }, []);
 
-  const logoSrc = scroll?logo_sm:logo
+  const logoSrc = logo
 
   let menuActive = menuState ? "is-inactive" : "";
   let change = menuState ? "change" : "";
-  const link = " text-xl   w-full   text-center font-normal mb-14 ";
+  const link = "   w-full   text-center /font-normal mb-14 ";
   const link1 =
-    "  font-normal 	  h-full  py-4";
-  const span = "my-auto    hover:text-lipstick ";
-  const span1 = "my-auto  	   h-full  ";
+    "  /font-normal 	  h-full  py-4";
+  const span = "  my-auto hover:text-lipstick ";
+  const span1 = "my-auto  h-full";
 
  
 
   return (
-    <header className="headerWrapper relative z-50 w-full sticky top-0 bg-pink  bg-white ">
-      <nav className={`nav md:flex justify-between items-center  flex-row md:mx-10 xl:mx-24 py-2 `}>
-        <div className="ml-4 md:ml-0 left w-28 md:w-32 lg:w-44">
+    <header className="headerWrapper relative z-50 w-full sticky top-0 bg-pink2 text-green text-18px uppercase font-medium ">
+      <nav className={`nav relative z-20 md:flex justify-between items-center  flex-row ${style.mx} py-4 `}>
+        <div className="left w-40 md:w-56">
           <Link to={`${locale}/`} className=" w-full ">
             <img src={logoSrc} alt="logo" className=" w-full "/>
           </Link>
@@ -56,68 +57,59 @@ const Header = (props) => {
          
        
             <Link to="/" href="" className={link1}>
-              <span className={span1}>Anchor</span>
+              <span className={span1}>{intl.formatMessage({ id: "Menu" })}</span>
             </Link>
          
        
             <Link to="/" href="" className={link1}>
-              <span className={span1}>Anchor</span>
-            </Link>
-         
-       
-            <Link to="/" href="" className={link1}>
-              <span className={span1}>Anchor</span>
+              <span className={span1}>{intl.formatMessage({ id: "Follow Us" })}</span>
             </Link>
 
 
             <Link to="/" href="" className={link1}>
-              <span className={span1}>Anchor</span>
+              <span className={span1}>{intl.formatMessage({ id: "Contact" })}</span>
             </Link>
 
 
             <div to="/" href="" className={link1} >
-       <Link to="/" className={`  ${intl.locale==="en"?"font-bold":""} `}> Eng </Link>  | <Link className={`  ${intl.locale==="es"?"font-bold":""} `} to="/es"> Esp </Link>   
+       <Link to="/" className={`  ${intl.locale==="en"?"font-bold":""} `}> En </Link>  | <Link className={`  ${intl.locale==="es"?"font-bold":""} `} to="/es"> Es </Link>   
             </div>
-            {/* <button >  <span className="uppercase bg-blue text-white font-bold py-4 px-6 tracking-wider"> order now </span> </button> */}
             <OrderNow padding="py-4 px-6"/>
         </div>
 
         {/* mobile  */}
         <div
-          className={`mobile header_rightDiv  hidden  justify-center  h-screen w-full absolute top-0 right-0 bg-white ${menuActive}`}
+          className={` mobile header_rightDiv relative z-10  hidden  justify-center  h-screen w-full absolute top-0 right-0 bg-pink2 ${menuActive}`}
         >
-          <div className=" flex flex-col md:hidden mt-20">
+          <div className=" flex flex-col md:hidden mt-20 ">
             <Link
               onClick={toggleMenu}
-              to="/#what"
+              to="/#story"
               className={link}
               activeClassName="bg-black"
             >
-              <span className={span}>Anchor</span>
+              <span className={span}>{intl.formatMessage({ id: "Our Story" })}</span>
             </Link>
             <Link onClick={toggleMenu} to="/" className={link}>
-              <span className={span}>Anchor</span>
+              <span className={span}> {intl.formatMessage({ id: "Menu" })} </span>
             </Link>
 
             <Link onClick={toggleMenu} to="/" className={link}>
-              <span className={span}>Anchor</span>
+              <span className={span}> {intl.formatMessage({ id: "Follow Us" })} </span>
             </Link>
 
             <Link onClick={toggleMenu} to="/" className={link}>
-              <span className={span}>Anchor</span>
+              <span className={span}>{intl.formatMessage({ id: "Contact" })}</span>
             </Link>
-            <Link onClick={toggleMenu} to="/" className={link}>
-              <span className={span}>Anchor</span>
-            </Link>
-            <Link onClick={toggleMenu} to="/" className={link}>
-              <span className={span}> <span className="font-bold"> Eng </span>  | Esp</span>
-            </Link>
-            {/* <button >  <span className="uppercase bg-blue text-white font-bold py-4 px-20 tracking-wider"> order now </span> </button> */}
+
+            <div to="/" href="" className={link} >
+       <Link to="/" className={`  ${intl.locale==="en"?"font-bold":""} `}> En </Link>  | <Link className={`  ${intl.locale==="es"?"font-bold":""} `} to="/es"> Es </Link>   
+            </div>
             <OrderNow padding="py-4 px-20"/>
           </div>
         </div>
         <div
-          className={`md:hidden burgerMenu  absolute top-4 right-4 md:right-8 z-50 ${change}`}
+          className={`md:hidden burgerMenu  absolute top-5 right-5 md:right-8 z-50 ${change}`}
           onClick={toggleMenu}
           onKeyDown={props.toggleMenu}
           role="button"

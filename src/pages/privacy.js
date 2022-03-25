@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="pageWrapper">
     <head>
-      <title>Kitchen Concept</title>
+      <title>Poked</title>
       </head>
       < MenuProvider> 
     <Header  /> 
@@ -216,7 +216,7 @@ export default function Home() {
         </p>
         <h2>Cookie Information</h2>
         <p>
-          In order for your visit to Kitchen Concept website to be attractive and to enable
+          In order for your visit to Poked website to be attractive and to enable
           the use of certain functions, we use the so-called cookies on various
           pages. Cookies are small text files that are stored in your browser.
           Some of the cookies we use are deleted after the end of the operation

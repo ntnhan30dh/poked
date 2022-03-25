@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="pageWrapper">
       <head>
-      <title>Kitchen Concept</title>
+      <title>Poked</title>
       </head>
       < MenuProvider> 
     <Header  /> 

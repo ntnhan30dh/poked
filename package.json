@@ -1,8 +1,8 @@
 {
-  "name": "kitchen-concept-template",
+  "name": "Poked",
   "version": "1.0.0",
   "private": true,
-  "description": "kitchen-concept-template",
+  "description": "Poked",
   "author": "Nhan Nguyen",
   "keywords": [
     "gatsby"
