@@ -14,7 +14,7 @@ return (
       onOpen={() => setOpen(true)}
       open={open}
       trigger={
-          <button className={props.button}>  <div className={`uppercase bg-green text-white  font-bold  tracking-wider ${props.padding}`}> {intl.formatMessage({ id: "Order Now" })}</div> </button>
+          <button className={props.button}>  <div className={` uppercase bg-green text-white  font-bold  tracking-wider ${props.padding}`}> {intl.formatMessage({ id: "Order Now" })}</div> </button>
 
       }
     >

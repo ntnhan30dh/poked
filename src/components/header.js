@@ -27,17 +27,17 @@ const Header = (props) => {
 
   let menuActive = menuState ? "is-inactive" : "";
   let change = menuState ? "change" : "";
-  const link = "w-full text-center mb-8  ";
-  const link1 = "h-full  py-4";
+  const link = "w-full text-center /mb-8  ";
+  const link1 = "h-full  py-4 ";
   const span = " span  my-auto pb-1 hover: border-b-4 border-pink1 font-bold ";
-  const span1 = "my-auto  h-full";
+  const span1 = "  /flex /items-center my-auto  h-full hover:border-b-4 border-pink1 hover:font-bold";
 
   return (
-    <header className="headerWrapper relative z-50 w-full sticky top-0 bg-pink2 text-green text-18px uppercase font-medium ">
+    <header className="headerWrapper relative z-50 w-full sticky top-0 bg-pink2 overflow-x-hidden text-green text-18px uppercase font-medium ">
       <nav
-        className={`nav relative z-20 md:flex justify-between items-center  flex-row ${style.mx} py-4 `}
+        className={`nav relative z-20 lg:flex justify-between items-center  flex-row ${style.mx} py-4 `}
       >
-        <div className="left w-40 md:w-56">
+        <div className="left w-40 lg:w-56">
           <Link to={`${locale}/`} className=" w-full ">
             <img src={logoSrc} alt="logo" className=" w-full " />
           </Link>
@@ -45,7 +45,7 @@ const Header = (props) => {
         {/* desktop */}
 
         <div
-          className={` desktop hidden md:flex  justify-between w-3/4 h-full `}
+          className={` desktop hidden lg:flex items-center justify-between w-3/4 h-full `}
           currentClassName="opacity-100 border-t-4 border-white "
         >
           <Link to="/" href="" className={link1}>
@@ -54,22 +54,25 @@ const Header = (props) => {
             </span>
           </Link>
 
+          <div className="span1"></div>
+
           <Link to="/" href="" className={link1}>
             <span className={span1}>{intl.formatMessage({ id: "Menu" })}</span>
           </Link>
 
+          <div className="span1"></div>
           <Link to="/" href="" className={link1}>
             <span className={span1}>
               {intl.formatMessage({ id: "Follow Us" })}
             </span>
           </Link>
-
+          <div className="span1"></div>
           <Link to="/" href="" className={link1}>
             <span className={span1}>
               {intl.formatMessage({ id: "Contact" })}
             </span>
           </Link>
-
+          <div className="span1"></div>
           <div to="/" href="" className={link1}>
             <Link
               to="/"
@@ -92,9 +95,9 @@ const Header = (props) => {
 
         {/* mobile  */}
         <div
-          className={` mobile header_rightDiv relative z-10  hidden  justify-center  h-screen w-full absolute top-0 right-0 bg-pink2 ${menuActive}`}
+          className={` mobile header_rightDiv relative z-10  hidden  justify-center  h-screen w-full absolute top-0 right-0 bg-pink2 ${menuActive} `}
         >
-          <div className=" flex flex-col md:hidden mt-20 w-full ">
+          <div className=" flex flex-col justify-around lg:hidden mt-1/10 /mb-1/3 h-3/4 w-full ">
             <Link
               onClick={toggleMenu}
               to="/#story"
@@ -230,7 +233,7 @@ const Header = (props) => {
           </div>
         </div>
         <div
-          className={`md:hidden burgerMenu  absolute top-5 right-5 md:right-8 z-50 ${change}`}
+          className={`lg:hidden burgerMenu  absolute top-5 right-0 lg:right-8 z-50 ${change}`}
           onClick={toggleMenu}
           onKeyDown={props.toggleMenu}
           role="button"

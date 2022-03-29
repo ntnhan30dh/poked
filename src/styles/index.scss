@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
-    // overflow-x: hidden;
+   // overflow-x: hidden;
    //  background-color: aqua;
     margin: 0;
     scroll-behavior: smooth;
@@ -65,6 +65,25 @@ body {
         margin-left: auto;
         margin-right: auto;
         margin-top: 2rem;
+        border-radius:50%
+
+      }
+      }
+    }
+
+
+    .desktop{
+      .span1{
+      &::after{
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: #FF7CF8;
+        position: relative;
+        display: block;
+        //margin-left: auto;
+        //margin-right: 0;
+       // margin-top: 2rem;
         border-radius:50%
 
       }
