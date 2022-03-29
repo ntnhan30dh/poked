@@ -52,6 +52,24 @@ body {
     .is-inactive {
       display: inline-flex;
     }
+
+    .mobile{
+      .span{
+      &::after{
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: #FF7CF8;
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        border-radius:50%
+
+      }
+      }
+    }
   }
 
   // footer
