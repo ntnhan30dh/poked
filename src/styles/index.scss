@@ -8,6 +8,21 @@ body {
     color:  #333333;;
   }
 
+  h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Montserrat', sans-serif !important;
+  //font-weight: 800;
+}
+
   // header
   .headerWrapper {
     .burgerMenu {
@@ -115,4 +130,10 @@ body {
     @media screen and (max-width: 700px) {
       width: 80%;
     }
+  }
+
+  //story
+
+  .shadow{
+    text-shadow: 4px 4px 0px #FF7CF8;
   }
