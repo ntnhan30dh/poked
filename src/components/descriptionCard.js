@@ -24,12 +24,12 @@ const DescriptionCard = (props) => {
 
   return (
     <article
-      className={`descriptionCard ${props.article} /max-w-1200px xl:mx-auto mt-20 `}
+      className={`descriptionCard ${props.article} max-w-1300px xl:mx-auto mt-20 `}
     >
       <div
-        className={`text md:max-w-2/3 lg:max-w-auto lg:w-1/2 lg:flex  mx-auto ${props.text}`}
+        className={`text /md:max-w-2/3 lg:max-w-auto  /w-full lg:w-2/3 lg:flex  mx-auto ${props.text}`}
       >
-      <div className=" w-14 lg:w-20 lg:block hidden mx-10 -mb-48">
+      <div className=" w-14 lg:w-20 lg:block hidden mr-16 -mb-48">
               <svg
                 width="100%"
                 height="auto"
@@ -45,7 +45,7 @@ const DescriptionCard = (props) => {
                 />
               </svg>
             </div>
-        <div className="w-3/4">
+        <div className="lg:w-3/4">
           <div className={` text-green my-8 relative`}>
             <h2 className={`${style.text.h2}`}>
               Let yourself be taken on a food-cation with Poked, delivering the
@@ -100,7 +100,7 @@ const DescriptionCard = (props) => {
       </div>
       <div
         parallaxData={parallaxData}
-        className={`w-72 mx-auto lg:w-1/2 max-w-500px my-14`}
+        className={`w-72 mx-auto lg:w-1/2  max-w-500px my-14`}
       >
         <img src={pic} alt="description" className="w-full " />
       </div>

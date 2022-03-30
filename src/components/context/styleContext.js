@@ -23,7 +23,7 @@ export const StyleProvider = ({children}) => {
       body2:"text-sm md:16px",
       body3:"",
       h1: " font-extrabold text-56px md:text-7xl", 
-      h2: " font-bold text-2xl //md:text-32px md:text-5xl", 
+      h2: " font-bold text-2xl md:text-32px ", 
       h3: " font-bold text-xl md:text-32px", 
       h4: "font-bold  text-base md:text-2xl", 
       p: "",
