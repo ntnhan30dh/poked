@@ -1,5 +1,5 @@
 import React from "react";
-//import Plx from 'react-plx';
+import { useIntl } from "gatsby-plugin-intl";
 
 import { useStyle } from "./context/styleContext";
 
@@ -7,21 +7,7 @@ import pic from "../images/palmTree.png";
 
 const DescriptionCard = (props) => {
   const style = useStyle();
-
-  const parallaxData = [
-    {
-      start: 0,
-      end: 500,
-      properties: [
-        {
-          startValue: 1,
-          endValue: 2,
-          property: "scale",
-        },
-      ],
-    },
-  ];
-
+  const intl = useIntl();
   return (
     <article
       className={`descriptionCard ${props.article} max-w-1300px xl:mx-auto mt-20 `}
@@ -48,9 +34,7 @@ const DescriptionCard = (props) => {
         <div className="lg:w-3/4">
           <div className={` text-green my-8 relative`}>
             <h2 className={`${style.text.h2}`}>
-              Let yourself be taken on a food-cation with Poked, delivering the
-              tropical taste of Hawaii’s national dish directly to you - like
-              beach-side service.
+            {intl.formatMessage({ id: "Story h2" })}
             </h2>
             <div className="absolute -top-16 lg:-top-6 right-1/3 lg:-right-20 w-14 lg:w-20">
               <svg
@@ -70,15 +54,9 @@ const DescriptionCard = (props) => {
             </div>
           </div>
           <p className={`${style.text.body1} font-medium relative`}>
-            Poké, which means “cut into small pieces”, features simple
-            ingredients, but once combined and finished with toppings of your
-            choice - that’s when the vibrant flavours really hit you! Whether a
-            light lunch or colourful healthy dinner, you can personalise your
-            bowl to create the perfect blend. <br /> <br />
-            All bowls are served with rice and paired with seafood, meat or
-            veggies - all ready for you to tuck in! And if you close your eyes,
-            you’ll hear the waves crash against the Hawaiian shore with every
-            mouthful.
+          {intl.formatMessage({ id: "Story p1" })}
+             <br /> <br />
+             {intl.formatMessage({ id: "Story p2" })}
             <div className="absolute -bottom-16 lg:bottom-auto lg:top-10 left-0  lg:-left-32 w-14 lg:w-20 lg:hidden">
               <svg
                 width="100%"
@@ -99,7 +77,6 @@ const DescriptionCard = (props) => {
         </div>
       </div>
       <div
-        parallaxData={parallaxData}
         className={`w-72 mx-auto lg:w-1/2  max-w-500px my-14`}
       >
         <img src={pic} alt="description" className="w-full " />

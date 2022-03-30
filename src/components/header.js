@@ -97,7 +97,7 @@ const Header = (props) => {
         <div
           className={` mobile header_rightDiv relative z-10  hidden  justify-center  h-screen w-full absolute top-0 right-0 bg-pink2 ${menuActive} `}
         >
-          <div className=" flex flex-col justify-around lg:hidden mt-1/10 /mb-1/3 h-3/4 w-full ">
+          <div className=" relative z-20 flex flex-col justify-around lg:hidden mt-1/10 /mb-1/3 h-3/4 w-full ">
             <Link
               onClick={toggleMenu}
               to="/#story"
@@ -147,7 +147,7 @@ const Header = (props) => {
             </div>
             <OrderNow padding="py-4 w-full" />
           </div>
-          <div className="icons absolute top-0 right-0 w-full h-full grid grid-cols-4 grid-rows-10">
+          <div className="icons absolute z-10 top-0 right-0 w-full h-full grid grid-cols-4 grid-rows-10">
             <div className="row-start-2  ...">
               <svg
                 width="56"
