@@ -7,6 +7,25 @@
     "Story h1":"GET THE TROPICAL TASTE",
     "Story h2": "Let yourself be taken on a food-cation with Poked, delivering the tropical taste of Hawaii’s national dish directly to you - like beach-side service.",
     "Story p1": "Poké, which means “cut into small pieces”, features simple ingredients, but once combined and finished with toppings of your choice - that’s when the vibrant flavours really hit you! Whether a light lunch or colourful healthy dinner, you can personalise your bowl to create the perfect blend.",
-    "Story p2": " All bowls are served with rice and paired with seafood, meat or veggies - all ready for you to tuck in! And if you close your eyes, you’ll hear the waves crash against the Hawaiian shore with every mouthful."
+    "Story p2": " All bowls are served with rice and paired with seafood, meat or veggies - all ready for you to tuck in! And if you close your eyes, you’ll hear the waves crash against the Hawaiian shore with every mouthful.",
+    "Menu h2" :"Pick your favourite today!",
+    "Menu h3" :"Sweet, salty, sour and spicy -  let your senses escape to the island way of life.",
+    "Teriyaki Chicken":"Teriyaki Chicken",
+    "Teriyaki ChickenD":"Chicken, mango, avocado, mushrooms,  red & green onion, Ginger Pickles, crispy corn, coriander, Teriyaki mayo",
+    "Spicy Beef":"Spicy Beef",
+    "Spicy BeefD":"Beef, rice, mango, wakame, chaucha, avocado, mushrooms,  red & green onion, crispy corn, coriander, Sriracha mayo",
+    "Aloha Salmon":"Aloha Salmon",
+    "Aloha SalmonD":"Salmon, rice, beans, cucumber, red & green onion, ginger pickles, red cabbage, coriander, Miso mayo",
+    "DIY Bowl":"DIY Bowl",
+    "DIY BowlD":"Any combination of selected proteins, mix-ins, toppings and sauces",
+    "New York Salad":"New York Salad",
+    "New York SaladD":"Salmon, rice, cream cheese, avocado, cucumber, green onion, sesame seeds and soy sauce",
+    "California Salad":"California Salad",
+    "California SaladD":"Kanikama, rice, cream cheese, avocado, cucumber, green onion, sesame seeds and soy sauce.",
+    "Teriyaki Chicken Salad":"Teriyaki Chicken Salad",
+    "Teriyaki Chicken SaladD":"Chicken, rice, cream cheese, avocado, cucumber, green onion, sesame seeds and teriyaki sauce.",
+    "Miu Chicken Salad":"Miu Chicken Salad",
+    "Miu Chicken SaladD":"Chicken, rice, cream cheese, avocado, cucumber, green onion, sesame seeds and soy sauce."
+    
     
   }

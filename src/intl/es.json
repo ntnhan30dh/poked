@@ -7,5 +7,24 @@
   "Story h1":"SIENTE EL SABOR TROPICAL",
   "Story h2":"Déjate llevar a unas deliciosas vacaciones de la mano de Pokéd, que te trae el sabor único tropical del plato nacional Hawaiiano directamente a casa - ¡Cómo si de un servicio de playa se tratáse!",
   "Story p1":"Poké, que literalmente significa “cortado en trozos pequeños”, es un plato compuesto de ingredientes sencillos que, mezclados y complementados con toppings, se torna una vibrante combinación de sabores. Ya sea un almuerzo ligero o una cena colorida y saludable, ¡Puedes personalizar tu propio bowl para crear la combinación perfecta!",
-  "Story p2":"Todos los bowls se sirven con arroz y se combinan con pescado, pollo o vegetales: todo para que disfrutes hasta el último bocado. Y, quién sabe, si te animas a cerrar los ojos, tal vez te sorprendas escuchando las olas golpeando contra la costa de Hawaii."
+  "Story p2":"Todos los bowls se sirven con arroz y se combinan con pescado, pollo o vegetales: todo para que disfrutes hasta el último bocado. Y, quién sabe, si te animas a cerrar los ojos, tal vez te sorprendas escuchando las olas golpeando contra la costa de Hawaii.",
+  "Menu h2" :"Elige tu favorito hoy!",
+  "Menu h3" :"Fresco, saludable, frutal, hawaiano: deja que tus sentidos vuelen al estilo de vida isleño.",
+  "Teriyaki Chicken":"Chicken Teri Poke",
+  "Teriyaki ChickenD":"Pechuga de pollo asada con salsa Teriyaki, Palta, Mango, Pickles de Repollo morado, Zanahoria, Arroz de sushi, Maíz cancha, Cebollín, Cilantro fresco y Semillas de sésamo. Con tu salsa preferida.",
+  "Aloha Salmon":"Salmon Aloha Poke",
+  "Aloha SalmonD":"Salmón fresco marinado, Palta, Camote, Porotos verdes, Pickles de repollo morado y Jengibre,  Arroz de sushi, Cilantro fresco, Cebollín y Semillas de sésamo. Con tu salsa preferida.",
+  "DIY Bowl":"Arma tu Poke",
+  "DIY BowlD":"Armá tu poke con una base de arroz de sushi y palta. Elige 1 proteína, 3 vegetales o frutas, 3 toppings y 1 salsa. Ármalo como tu prefieras!",
+  "Tuna Oahu Poke":"Tuna Oahu Poke",
+  "Tuna Oahu PokeD":"Atún fresco marinado, Palta, Mango, Pickles de Repollo morado, Zanahoria, Arroz de sushi, Maíz cancha, Cilantro fresco, Cebollín y Semillas de sésamo. Con tu salsa preferida.",
+  "New York Salad":"New York Gohan",
+  "New York SaladD":"Salmón fresco, Palta, Queso crema, Arroz de sushi, Cebollín y Semillas de sésamo. Con salsa de soya.",
+  "Teriyaki Chicken Salad":"Teriyaki Gohan",
+  "Teriyaki Chicken SaladD":"Pechuga de pollo asada con salsa Teriyaki, Palta, Queso crema, Arroz de sushi, Cebollín y Semillas de sésamo. Con salsa de soya.",
+  "Miu Chicken Salad":"Miu Chicken Salad",
+  "Miu Chicken SaladD":"Pollo Teriyaki asado, Palta, Queso crema, Arroz de sushi, Cebolla de verdeo y Semillas de sésamo. Con salsa de soja o Teriyaki a elección.",
+  "Shrimp Ceviche Gohan":"Shrimp Ceviche Gohan",
+  "Shrimp Ceviche GohanD":"Camarones marinados con Leche de Tigre, Palta, Queso crema, Arroz de sushi, Cebollín y Semillas de sésamo. Con salsa de soya."
+  
 }

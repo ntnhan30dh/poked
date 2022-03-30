@@ -1,36 +1,59 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
+import { useIntl } from "gatsby-plugin-intl";
 
 import MenuItem from "./menuItem";
 
-const Carousel = (props) => {
+const Carousel = () => {
+  const intl = useIntl();
+  //creating the ref
+  const customeSlider = useRef();
+  const gotoNext = () => {
+    customeSlider.current.slickNext();
+  };
 
-  const menuType = {
-    "category1": ["category1.1","category1.2","category1.3","category1.4","category1.5"],
-    "category2": ["category2.1","category2.2","category2.3","category2.4","category2.5"],
-    "category3": ["category3.1","category3.2","category3.3","category3.4","category3.5"],
-    "category4": ["category4.1","category4.2","category4.3","category4.4","category4.5"]
-  }
-  const itemList = menuType[props.type]
+  const gotoPrev = () => {
+    customeSlider.current.slickPrev();
+  };
+
+  const itemList =
+    intl.locale === "en"
+      ? [
+          "Teriyaki Chicken",
+          "Spicy Beef",
+          "Aloha Salmon",
+          "DIY Bowl",
+          "New York Salad",
+          "California Salad",
+          "Teriyaki Chicken Salad",
+          "Miu Chicken Salad",
+        ]
+      : [
+          "Teriyaki Chicken",
+          "Aloha Salmon",
+          "DIY Bowl",
+          "Tuna Oahu Poke",
+          "New York Salad",
+          "Teriyaki Chicken Salad",
+          "Miu Chicken Salad",
+          "Shrimp Ceviche Gohan",
+        ];
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3.1,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 5000,
     cssEase: "linear",
-    centerMode: true,
-    arrows:false,
+      arrows: false,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
-          dots: false,
         },
       },
 
@@ -39,27 +62,47 @@ const Carousel = (props) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2,
+          //centerMode: true,
         },
       },
 
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.04,
+          slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
+          // centerMode: true,
         },
       },
     ],
   };
-  {console.log("props",props)}
+const btnStyle ="opacity-50 hover:opacity-100 mx-24 hidden lg:block"
+const arrowStyle ="w-8"
+const arrow =""
   return (
-    <div className="Carousel ">
-      <Slider {...settings} className="">
-        {itemList.map(n=>{ return <MenuItem name={n}/>})}     
-      </Slider>
+    <div className="CarouselWrap flex justify-center">
+      <button onClick={() => gotoPrev()} className={`  ${btnStyle} ${arrow}`}>
+        <div className={arrowStyle}>
+        <svg width="100%" height="auto" viewBox="0 0 64 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M48 66L16 34L48 2" stroke="#FF7CF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </div>
+      </button>
+      <div className="Carousel max-w-5xl ">
+
+        <Slider {...settings} className="" ref={customeSlider}>
+          {itemList.map((n) => {
+            return <MenuItem name={n} />;
+          })}
+        </Slider>
+      </div>
+        <button onClick={() => gotoNext()} className={` ${btnStyle} ${arrow} `}>
+        <div className={arrowStyle}>
+        <svg width="100%" height="auto" viewBox="0 0 64 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 66L48 34L16 2" stroke="#FF7CF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </div>
+      </button>
     </div>
   );
 };

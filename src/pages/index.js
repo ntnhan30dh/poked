@@ -13,8 +13,6 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Story from "../components/story";
 import Menu from "../components/menu";
-import IG from "../components/ig";
-import Platform from "../components/platform";
 
 const IndexPage = () => {
   return (
@@ -25,13 +23,8 @@ const IndexPage = () => {
         <Header />
       </MenuProvider>
     <Story/>  
-    {/* <Menu type={1}/>
-    <Menu type={2}/>
-    <Menu type={2} margin="left"/>
-    <Menu type={2} margin="right"/>
-    <IG/>
-    <Platform/>
-    <Footer/>   */}
+    <Menu type={1}/>
+    <Footer/>  
   </StyleProvider>
     </main>
   );

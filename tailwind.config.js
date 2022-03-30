@@ -10,9 +10,11 @@ module.exports = {
         pink2:"#FFE8FC",
       },
       fontSize: {
+        '16px20': ['16px', '20px'],
         '16px': ['16px', '28px'],
         '18px': ['18px', '32px'],
         '24px': ['24px', '28px'],
+        '24px40': ['24px', '40px'],
         '30px': ['30px', '36px'],
         '32px': ['32px', '44px'],
         '40px': ['40px', '44px'],
@@ -27,6 +29,7 @@ module.exports = {
       '2/3': '66%',
     },
     width:{
+      '72px':'72px',
       '298px':'298px'
     },
     gridTemplateRows: {
