@@ -13,17 +13,19 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Story from "../components/story";
 import Menu from "../components/menu";
+import IG from "../components/ig";
 
 const IndexPage = () => {
   return (
     <main>
       <title>Poked</title>
       < StyleProvider> 
-      <MenuProvider>
+      {/* <MenuProvider>
         <Header />
       </MenuProvider>
-    <Story/>  
+    <Story/>   */}
     <Menu type={1}/>
+    <IG/>  
     <Footer/>  
   </StyleProvider>
     </main>
