@@ -9,6 +9,7 @@ const DescriptionCard = (props) => {
   const style = useStyle();
   const intl = useIntl();
   return (
+    <div className="relative"> 
     <article
       className={`descriptionCard relative ${props.article} max-w-1300px xl:mx-auto /mt-20 lg:pb-40 `}
     >
@@ -81,10 +82,11 @@ const DescriptionCard = (props) => {
       >
         <img src={pic} alt="description" className="w-full " />
       </div>
+    </article>
       <div class="ocean">
   <div class="wave wave_pink2"></div>
 </div>
-    </article>
+    </div>
   );
 };
 
