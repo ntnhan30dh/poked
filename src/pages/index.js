@@ -20,10 +20,10 @@ const IndexPage = () => {
     <main>
       <title>Poked</title>
       < StyleProvider> 
-      {/* <MenuProvider>
+      <MenuProvider>
         <Header />
       </MenuProvider>
-    <Story/>   */}
+    <Story/>  
     <Menu type={1}/>
     <IG/>  
     <Footer/>  

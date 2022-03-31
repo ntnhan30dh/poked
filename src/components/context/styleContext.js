@@ -10,7 +10,8 @@ export const useStyle = () => {
 
 export const StyleProvider = ({children}) => {
   const style = {
-    mx: 'mx-5 md:mx-10 /xl:mx-24',
+    mx: 'mx-5 md:mx-10 xl:mx-20',
+    px: 'px-5 md:px-10 xl:px-20',
     my: 'my-10 md:my-14',
     mb_sm: 'mb-8 md:mb-10',
     mb_md: 'mb-10 md:mb-14',
@@ -22,9 +23,9 @@ export const StyleProvider = ({children}) => {
       body1:"text-16px md:text-18px",
       body2:" text-sm md:16px20",
       body3:"",
-      h1: " font-extrabold text-56px md:text-72px", 
-      h2: " font-bold text-2xl md:text-32px ", 
-      h3: " font-bold text-xl md:text-24px40", 
+      h1: "font-extrabold text-56px md:text-72px", 
+      h2: "font-bold text-2xl md:text-32px ", 
+      h3: "font-bold text-xl md:text-24px40", 
       h4: "font-bold  text-base md:text-2xl", 
       p: "",
     }
