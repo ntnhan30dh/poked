@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body, html {
-    overflow-x: hidden;
-   //  background-color: aqua;
-    margin: 0;
-    scroll-behavior: smooth;
-    font-family: 'Montserrat', sans-serif !important;
-    color:  #333333;;
-    font-size: 100% !important;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body,
+html {
+  overflow-x: hidden;
+  //  background-color: aqua;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif !important;
+  color: #333333;
+  font-size: 100% !important;
+}
 
-  h1,
+h1,
 h2,
 h3,
 h4,
@@ -20,140 +21,184 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   //font-weight: 800;
 }
 
-  // header
-  .headerWrapper {
-    .burgerMenu {
-     
-      cursor: pointer;
-      @media screen and (max-width: 639px) {
-        display: inline;
-      }
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 25px;
-        height: 3px;
-        background-color: #009341;
-        margin: 3px 0;
-        transition: 0.4s;
-      }
-      
+// header
+.headerWrapper {
+  .burgerMenu {
+    cursor: pointer;
+    @media screen and (max-width: 639px) {
+      display: inline;
     }
-  
-    .change {
-  
-      .bar1,
-      .bar2,
-      .bar3 {
-      }
-      .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-6px, 3px);
-        transform: rotate(-45deg) translate(-4px, 3px);
-      }
-  
-      .bar2 {
-        opacity: 0;
-      }
-  
-      .bar3 {
-        -webkit-transform: rotate(45deg) translate(-4px, -4px);
-        transform: rotate(45deg) translate(-5px, -4px);
-      }
+    .bar1,
+    .bar2,
+    .bar3 {
+      width: 25px;
+      height: 3px;
+      background-color: #009341;
+      margin: 3px 0;
+      transition: 0.4s;
     }
-  
-    .is-inactive {
-      display: inline-flex;
+  }
+
+  .change {
+    .bar1,
+    .bar2,
+    .bar3 {
+    }
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-6px, 3px);
+      transform: rotate(-45deg) translate(-4px, 3px);
     }
 
-    .mobile{
-      .span{
-      &::after{
+    .bar2 {
+      opacity: 0;
+    }
+
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-4px, -4px);
+      transform: rotate(45deg) translate(-5px, -4px);
+    }
+  }
+
+  .is-inactive {
+    display: inline-flex;
+  }
+
+  .mobile {
+    .span {
+      &::after {
         content: "";
         width: 6px;
         height: 6px;
-        background-color: #FF7CF8;
+        background-color: #ff7cf8;
         position: relative;
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 2rem;
-        border-radius:50%
-
-      }
+        border-radius: 50%;
       }
     }
+  }
 
-
-    .desktop{
-      .span1{
-      &::after{
+  .desktop {
+    .span1 {
+      &::after {
         content: "";
         width: 6px;
         height: 6px;
-        background-color: #FF7CF8;
+        background-color: #ff7cf8;
         position: relative;
         display: block;
         //margin-left: auto;
         //margin-right: 0;
-       // margin-top: 2rem;
-        border-radius:50%
-
-      }
+        // margin-top: 2rem;
+        border-radius: 50%;
       }
     }
   }
+}
 
-  // footer
-  .footer{
-    ul {
-      li{
-        margin-top: 0.5rem;
-      }
+// footer
+.footer {
+  ul {
+    li {
+      margin-top: 0.5rem;
     }
   }
+}
 
-  // un styled semantic-ui
+// un styled semantic-ui
 
-  a{
-    color: unset !important;
+a {
+  color: unset !important;
+}
+
+// imprint
+.legalInfo-div {
+  width: 60%;
+  margin: 0 auto;
+  padding: 5% 0;
+  min-height: 700px;
+  @media screen and (max-width: 700px) {
+    width: 80%;
   }
+}
 
-  // imprint 
-  .legalInfo-div{
-    width: 60%;
-    margin: 0 auto;
-    padding: 5% 0;
-    min-height: 700px;
-    @media screen and (max-width: 700px) {
-      width: 80%;
-    }
+//story
+
+.shadow {
+  text-shadow: 4px 4px 0px #ff7cf8;
+}
+
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+
+.wave {
+  position: absolute;
+  bottom: -10px;
+  width: 3200px;
+  height: 100px;
+  animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+.wave_white {
+  background: url(../images/waveWhite.svg) repeat-x;
+}
+
+.wave_pink1 {
+  background: url(../images/wavePink1.svg) repeat-x;
+}
+
+.wave_pink2 {
+  background: url(../images/wavePink2.svg) repeat-x;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
   }
-
-  //story
-
-  .shadow{
-    text-shadow: 4px 4px 0px #FF7CF8;
+  100% {
+    margin-left: -1600px;
   }
+}
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -40px, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+.endWave {
+  display: none;
+}
 
-  // slick
+// slick
 
-  
-    .slick-track {
-      display: flex !important;
-    }
-    
-    .slick-slide {
-      height: unset !important;
-      div{
-        height: 100%;
-      }
-    }
-   
-    // ig
-    .shadow2{
-      text-shadow: 4px 4px 0px #FFE8FC;
-    }
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: unset !important;
+  div {
+    height: 100%;
+  }
+}
+
+// ig
+.shadow2 {
+  text-shadow: 4px 4px 0px #ffe8fc;
+}

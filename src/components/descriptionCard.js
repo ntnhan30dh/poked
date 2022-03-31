@@ -10,7 +10,7 @@ const DescriptionCard = (props) => {
   const intl = useIntl();
   return (
     <article
-      className={`descriptionCard ${props.article} max-w-1300px xl:mx-auto mt-20 `}
+      className={`descriptionCard relative ${props.article} max-w-1300px xl:mx-auto /mt-20 lg:pb-40 `}
     >
       <div
         className={`text /md:max-w-2/3 lg:max-w-auto  /w-full lg:w-2/3 lg:flex  mx-auto ${props.text}`}
@@ -81,6 +81,9 @@ const DescriptionCard = (props) => {
       >
         <img src={pic} alt="description" className="w-full " />
       </div>
+      <div class="ocean">
+  <div class="wave wave_pink2"></div>
+</div>
     </article>
   );
 };

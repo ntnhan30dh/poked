@@ -9,6 +9,7 @@ const Story = () =>{
     return (
 <section className="" id="story">
     <DescriptionCard2 article="  "  text="   "/>
+  
     <DescriptionCard article={`${style.mx}   lg:flex  items-center`} text=" "/>
 </section>
     )

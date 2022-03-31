@@ -12,7 +12,7 @@ const DescriptionCard2 = (props) => {
     const style = useStyle()
     const intl = useIntl();
   return (
-    <div>
+    <div className="relative">
     <article className={`descriptionCard ${props.article} h-screen bg-cover bg-center relative flex items-center md:hidden`}style={{backgroundImage: "url(" + pic_mobile + ")"}}>
       <div className={`relative text-center  mx-4  ${props.text}`}>
       <h1 className={`${style.text.h1} text-white shadow`}>{intl.formatMessage({ id: "Story h1" })}</h1>
@@ -26,6 +26,9 @@ const DescriptionCard2 = (props) => {
         </div>
       
     </article>
+    <div class="ocean">
+  <div class="wave wave_white"></div>
+</div>
     </div>
   );
 };
