@@ -1,5 +1,7 @@
 import React from "react";
 import { useIntl } from "gatsby-plugin-intl";
+import Plx from 'react-plx';
+
 
 import { useStyle } from "./context/styleContext";
 
@@ -8,6 +10,36 @@ import pic from "../images/palmTree.png";
 const DescriptionCard = (props) => {
   const style = useStyle();
   const intl = useIntl();
+
+  const parallaxData = [
+    {
+      start: 0,
+      end: 500,
+      properties: [
+        {
+          startValue: 0,
+          endValue: 1,
+          property: 'scale',
+        },
+      ],
+    },
+  ];
+
+  const rotate = [
+    {
+      start: "self",
+      duration: 1000,
+      properties: [ 
+          {
+            startValue: 0,
+            endValue: 360,
+            property: "rotate"
+          },
+      ],
+    },
+  ];
+
+  
   return (
     <div className="relative">
       <article
@@ -16,7 +48,9 @@ const DescriptionCard = (props) => {
         <div
           className={`text /md:max-w-2/3 lg:max-w-auto  /w-full lg:w-2/3 lg:flex  mx-auto ${props.text}`}
         >
-          <div className=" w-14 lg:w-20 lg:block hidden mr-16 -mb-48">
+          <Plx className=" shrimp w-14 lg:w-20 lg:block hidden mr-16 -mb-48"
+          parallaxData={ rotate }>
+
             <svg
               width="100%"
               height="auto"
@@ -31,13 +65,16 @@ const DescriptionCard = (props) => {
                 fill="#FF7CF8"
               />
             </svg>
-          </div>
+          </Plx>
           <div className="lg:w-3/4">
             <div className={` text-green my-8 relative`}>
-              <h2 className={`${style.text.h2}`}>
+              <h2 className={`${style.text.h2}`}
+              >
                 {intl.formatMessage({ id: "Story h2" })}
               </h2>
-              <div className=" avocada z-20 absolute -top-16 lg:-top-6 right-1/3 lg:-right-20 w-14 lg:w-20">
+              <Plx  parallaxData={ parallaxData } className=" avocado z-20 absolute -top-16 lg:-top-6 right-1/3 lg:-right-20 w-14 lg:w-20"
+             
+              >
                 <svg
                   width="100%"
                   height="auto"
@@ -52,13 +89,14 @@ const DescriptionCard = (props) => {
                     fill="#FF7CF8"
                   />
                 </svg>
-              </div>
+              </Plx>
             </div>
             <p className={`${style.text.body1} font-medium relative`}>
               {intl.formatMessage({ id: "Story p1" })}
               <br /> <br />
               {intl.formatMessage({ id: "Story p2" })}
-              <div className="absolute -bottom-16 lg:bottom-auto lg:top-10 left-0  lg:-left-32 w-14 lg:w-20 lg:hidden">
+              <div className="absolute -bottom-16 lg:bottom-auto lg:top-10 left-0  lg:-left-32 w-14 lg:w-20 lg:hidden"
+              >
                 <svg
                   width="100%"
                   height="auto"
