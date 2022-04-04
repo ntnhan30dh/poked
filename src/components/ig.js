@@ -7,7 +7,7 @@ const IG = () =>{
   const style = useStyle();
 
   return (
-      <section  id="ig" className={`${style.px} ig relative py-20 lg:pt-28 lg:pb-44 `}>
+      <section  id="ig" className={`${style.px} ig relative py-20 lg:pt-28 pb-24 md:pb-32 lg:pb-44 `}>
       <div className="w-full absolute z-20 -top-10 md:-top-24  ">
         <div className="w-72px md:w-28 mx-auto">
         <svg width="100%" height="auto" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">

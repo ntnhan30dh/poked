@@ -10,7 +10,7 @@ const Menu = () => {
   const intl = useIntl();
 
   return (
-    <section className={`menu relative bg-pink2 pb-14 lg:pb-44  ${style} ${style.px}`} id="menu">
+    <section className={`menu relative bg-pink2 pb-14 pb-28 lg:pb-44  ${style} ${style.px}`} id="menu">
       <div className="w-full left-0 absolute -top-10 lg:-top-24 z-20 ">
         <div className="w-72px lg:w-28 mx-auto">
         <svg width="100%" height="auto" viewBox="0 0 142 142" fill="none" xmlns="http://www.w3.org/2000/svg">
