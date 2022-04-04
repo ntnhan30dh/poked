@@ -41,7 +41,7 @@ const DescriptionCard = (props) => {
 
   
   return (
-    <div className="relative">
+    <div className="relative" id="story">
       <article
         className={`descriptionCard relative ${props.article} max-w-1300px xl:mx-auto pb-20 lg:pb-40 `}
       >

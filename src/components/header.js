@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl";
+import Scrollspy from 'react-scrollspy'
 
 import logo from "../images/logo.png";
 
@@ -29,7 +30,7 @@ const Header = (props) => {
   let change = menuState ? "change" : "";
   const link = "w-full text-center /mb-8  ";
   const link1 = "h-full  py-4 ";
-  const span = " span  my-auto pb-1 hover: border-b-4 border-pink1 font-bold ";
+  const span = " span  my-auto pb-1 /hover:border-b-4 border-pink1 /font-bold ";
   const span1 = "  /flex /items-center my-auto  h-full hover:border-b-4 border-pink1 hover:font-bold";
 
   return (
@@ -44,30 +45,32 @@ const Header = (props) => {
         </div>
         {/* desktop */}
 
-        <div
+        <Scrollspy
           className={` desktop hidden lg:flex items-center justify-between w-3/4 h-full `}
-          currentClassName="opacity-100 border-t-4 border-white "
+          currentClassName="font-bold current"
+          items={ ['story', 'span1','menu', 'span1', 'ig','span1', 'contact'] }
+          offset={ -150 }
         >
-          <Link to="/" href="" className={link1}>
-            <span className={span1}>
+          <Link to="#story" href="stroy"  className={link1}>
+            <span className={span1} >
               {intl.formatMessage({ id: "Our Story" })}
             </span>
           </Link>
 
           <div className="span1"></div>
 
-          <Link to="/" href="" className={link1}>
+          <Link to="#menu" href="menu" className={link1}>
             <span className={span1}>{intl.formatMessage({ id: "Menu" })}</span>
           </Link>
 
           <div className="span1"></div>
-          <Link to="/" href="" className={link1}>
+          <Link to="#ig" href="ig" className={link1}>
             <span className={span1}>
               {intl.formatMessage({ id: "Follow Us" })}
             </span>
           </Link>
           <div className="span1"></div>
-          <Link to="/" href="" className={link1}>
+          <Link to="#contact" href="contact" className={link1}>
             <span className={span1}>
               {intl.formatMessage({ id: "Contact" })}
             </span>
@@ -91,38 +94,41 @@ const Header = (props) => {
             </Link>
           </div>
           <OrderNow padding="py-4 px-6" />
-        </div>
+        </Scrollspy>
 
         {/* mobile  */}
         <div
-          className={` mobile header_rightDiv relative z-10  hidden  justify-center  h-screen w-full absolute top-0 right-0 bg-pink2 ${menuActive} `}
+          className={` mobile header_rightDiv relative z-10  hidden  justify-center  h-screen w-full //absolute top-0 right-0  ${menuActive} `}
         >
-          <div className=" relative z-20 flex flex-col justify-around lg:hidden mt-1/10 /mb-1/3 h-3/4 w-full ">
+          <Scrollspy className=" relative z-20 flex flex-col justify-around lg:hidden mt-1/10 /mb-1/3 h-3/4 w-full "
+          currentClassName="font-bold current"
+          items={ ['story', 'menu',  'ig', 'contact'] }
+          offset={ -150 }
+          >
             <Link
               onClick={toggleMenu}
-              to="/#story"
+              to="#story" href="story"
               className={link}
-              activeClassName="bg-black"
             >
               <span className={span}>
                 {intl.formatMessage({ id: "Our Story" })}
               </span>
             </Link>
-            <Link onClick={toggleMenu} to="/" className={link}>
+            <Link onClick={toggleMenu} to="#menu" href="menu" className={link}>
               <span className={span}>
                 {" "}
                 {intl.formatMessage({ id: "Menu" })}{" "}
               </span>
             </Link>
 
-            <Link onClick={toggleMenu} to="/" className={link}>
+            <Link onClick={toggleMenu} to="#ig" href="ig" className={link}>
               <span className={span}>
                 {" "}
                 {intl.formatMessage({ id: "Follow Us" })}{" "}
               </span>
             </Link>
 
-            <Link onClick={toggleMenu} to="/" className={link}>
+            <Link onClick={toggleMenu} to="#contact" href="contact" className={link}>
               <span className={span}>
                 {intl.formatMessage({ id: "Contact" })}
               </span>
@@ -146,7 +152,7 @@ const Header = (props) => {
               </Link>
             </div>
             <OrderNow padding="py-4 w-full" />
-          </div>
+          </Scrollspy>
           <div className="icons absolute z-10 top-0 right-0 w-full h-full grid grid-cols-4 grid-rows-10">
             <div className="row-start-2  ...">
               <svg

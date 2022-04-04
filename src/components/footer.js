@@ -11,7 +11,7 @@ const Footer = () => {
 
   const h4 = ` ${style.mt_sm}  mb-3`;
   return (
-    <section className={`footer ${style.px}  } bg-pink1 text-white pb-14 pt-4 `}>
+    <section className={`footer ${style.px}  } bg-pink1 text-white pb-14 pt-4 `} id="contact">
       <div className="top w-full lg:flex justify-between lg:mb-10 /lg:mt-14">
         <div className="w-44 lg:w-60 mx-auto lg:ml-0  ">
           <img src={logo} alt="logo" className="w-full  " />

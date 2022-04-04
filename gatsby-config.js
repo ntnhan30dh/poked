@@ -25,5 +25,11 @@ module.exports = {
       redirect: false,
     },
   },
+  {
+    resolve: "gatsby-plugin-anchor-links",
+    options: {
+      offset: -120
+    }
+  },
 ]
 };

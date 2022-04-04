@@ -7,7 +7,7 @@ import DescriptionCard2 from "./descriptionCard2";
 const Story = () =>{
     const style = useStyle();
     return (
-<section className="" id="story">
+<section className="" >
     <DescriptionCard2 article="  "  text="   "/>
   
     <DescriptionCard article={`${style.mx}   lg:flex  items-center`} text=" "/>

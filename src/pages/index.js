@@ -17,16 +17,18 @@ import IG from "../components/ig";
 
 const IndexPage = () => {
   return (
-    <main className="overflow-x-hidden">
+    <main className="">
       <title>Poked</title>
       < StyleProvider> 
       <MenuProvider>
         <Header />
       </MenuProvider>
+      <div className="overflow-x-hidden">
     <Story/>  
     <Menu type={1}/>
     <IG/>  
     <Footer/>  
+      </div>
   </StyleProvider>
     </main>
   );
