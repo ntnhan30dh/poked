@@ -1,6 +1,8 @@
 import React from "react"
 import { useStyle } from "./context/styleContext";
 import { useIntl } from "gatsby-plugin-intl";
+import { Link } from "gatsby";
+
 
 import Plx from 'react-plx';
 
@@ -68,7 +70,9 @@ const IG = () =>{
 </svg>
 
         </Plx>
+        <Link to = "https://www.instagram.com/poked_cl/" target="_blank">
       <h1 className={`${style.text.h1} text-green shadow2 text-center  max-w-1240px mx-auto `}>{intl.formatMessage({ id: "Follow" })}</h1>
+        </Link>
       </div>
       <div class="ocean">
   <div class="wave wave_pink1"></div>

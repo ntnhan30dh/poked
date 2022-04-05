@@ -5,12 +5,15 @@ import {useStyle} from './context/styleContext'
 import OrderNow from './orderNow'
 
 import sticker from "../images/sticker.png";
+import sticker_es from "../images/sticker_spanish.png";
 import pic from "../images/cover.png";
 import pic_mobile from "../images/cover_mobile.png";
 
 const DescriptionCard2 = (props) => {
     const style = useStyle()
     const intl = useIntl();
+
+    const stickerPic = intl.locale === "en"?sticker:sticker_es
   return (
     <div className="relative">
     <article className={`descriptionCard ${props.article} h-screen bg-cover bg-center relative flex items-center md:hidden`}style={{backgroundImage: "url(" + pic_mobile + ")"}}>
@@ -22,7 +25,7 @@ const DescriptionCard2 = (props) => {
     </article>
     <article className={`descriptionCard ${props.article} h-screen bg-cover bg-center relative  items-center justify-center hidden md:flex`}style={{backgroundImage: "url(" + pic + ")"}}>
     <div className=" w-1/4 max-w-409px">
-            <img src={sticker} alt="sticker" className=" w-full " />
+            <img src={stickerPic} alt="sticker" className=" w-full " />
         </div>
       
     </article>

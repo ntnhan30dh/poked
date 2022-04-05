@@ -22,7 +22,7 @@ const Footer = () => {
             {intl.formatMessage({ id: "Follow us on" })}
           </div>
           <div className="some ">
-            <Link to="/" className="w-12  ">
+            <Link to = "https://www.instagram.com/poked_cl/" target="_blank" className="w-12  ">
               <svg
                 width="48"
                 height="48"
