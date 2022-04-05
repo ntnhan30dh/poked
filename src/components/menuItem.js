@@ -5,6 +5,12 @@ import { useStyle } from "./context/styleContext";
 import TeriyakiChickeni from "../images/menu/TeriyakiChicken.png";
 import SpicyBeef from "../images/menu/SpicyBeef.png";
 import AlohaSalmon from "../images/menu/AlohaSalmon.png";
+import NewYorkSalad from "../images/menu/NewYorkSalad.png";
+import CaliforniaSalad from "../images/menu/CaliforniaSalad.png";
+import TeriyakiChickenSalad from "../images/menu/TeriyakiChickenSalad.png";
+import MiuChickenSalad from "../images/menu/MiuChickenSalad.png"; 
+import TunaOahuPoke from "../images/menu/TunaOahuPoke.png";
+import ShrimpCevicheGohan from "../images/menu/ShrimpCevicheGohan.png";
 
 
 const MenuItem = (props) =>{
@@ -16,10 +22,12 @@ const MenuItem = (props) =>{
         "Spicy Beef":SpicyBeef,
         "Aloha Salmon":AlohaSalmon,
         // "DIY Bowl",
-        // "New York Salad",
-        // "California Salad",
-        // "Teriyaki Chicken Salad",
-        // "Miu Chicken Salad", 
+         "New York Salad": NewYorkSalad,
+         "California Salad": CaliforniaSalad,
+         "Teriyaki Chicken Salad":TeriyakiChickenSalad ,
+         "Miu Chicken Salad": MiuChickenSalad , 
+        "Tuna Oahu Poke": TunaOahuPoke,
+        "Shrimp Ceviche Gohan": ShrimpCevicheGohan ,
          }
 const pic = picObj[props.name]?picObj[props.name]:TeriyakiChickeni
      return (

@@ -36,7 +36,7 @@ const Header = (props) => {
   return (
     <header className="headerWrapper relative z-50 w-full sticky top-0 bg-pink2 overflow-x-hidden text-green text-18px uppercase font-medium ">
       <nav
-        className={`nav relative z-20 lg:flex justify-between items-center  flex-row ${style.mx} py-4 `}
+        className={`nav relative z-20 lg:flex justify-between items-center  flex-row ${style.mx} ${scroll?"":'py-4'} `}
       >
         <div className="left w-40 lg:w-56">
           <Link to={`${locale}/`} className=" w-full ">
