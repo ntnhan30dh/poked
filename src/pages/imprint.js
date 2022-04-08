@@ -43,6 +43,10 @@ export default function Home() {
           <li>
             Emmanuel Thomassin (CFO) <br />
           </li>
+          <li>
+          Pieter-Jan Vandepitte (COO)
+ <br />
+          </li>
         </ul>
         <h3>Supervisory Board</h3>
         <ul>
@@ -54,13 +58,11 @@ export default function Home() {
           Email: hello@pokedbowls.com
         </p>
         <p>
-          Registergericht/district court: Amtsgericht Berlin-Charlottenburg /
-          Local Court Charlottenburg Berlin <br />
-          Handelsregister/Commercial Register: HRB 198015 B<br />
-          Umsatzsteuer-Identifikationsnummer/ VAT–ID No.: DE 815294913 <br />
-          Responsible for the content according to § 55 RStV
-          (Rundfunkstaatsvertrag / Interstate Broadcasting Agreement): Niklas
-          Östberg
+        Registergericht/district court: Amtsgericht Berlin-Charlottenburg / Local Court Charlottenburg Berlin <br />
+Handelsregister/Commercial Register: HRB 198015 B <br />
+Umsatzsteuer-Identifikationsnummer/ VAT–ID No.: DE 815294913 <br />
+Responsible for the content according to § 55 RStV (Rundfunkstaatsvertrag / Interstate Broadcasting Agreement): Niklas Östberg
+
         </p>
       </div>
       < StyleProvider> 

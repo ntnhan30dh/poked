@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl";
 import Scrollspy from 'react-scrollspy'
+import useSound from 'use-sound';
 
 import logo from "../images/logo.png";
+import sound from "../components/sound/sound.m4a"
 
 import { useMenu, useMenuUpdate } from "./context/menuContext";
 import { useStyle } from "./context/styleContext";
@@ -13,15 +15,29 @@ const Header = (props) => {
   const menuState = useMenu();
   const toggleMenu = useMenuUpdate();
   const style = useStyle();
-
+  const [play] = useSound(sound,{
+    // `interrupt` ensures that if the sound starts again before it's
+    // ended, it will truncate it. Otherwise, the sound can overlap.
+    interrupt: true,
+  });
   const intl = useIntl();
   const locale = intl.locale !== "en" ? `/${intl.locale}` : "";
 
   const [scroll, setScroll] = useState(false);
+
+  // const handleClick = () => {
+  //  play()
+  // }
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
     });
+    // if (scroll) {
+    //   play() 
+    // }
+    //play() 
+
   }, []);
 
   const logoSrc = logo;
@@ -34,12 +50,13 @@ const Header = (props) => {
   const span1 = "  /flex /items-center my-auto  h-full hover:border-b-4 border-pink1 hover:font-bold";
 
   return (
+   
     <header className="headerWrapper relative z-50 w-full sticky top-0 bg-pink2 overflow-x-hidden text-green text-18px uppercase font-medium ">
       <nav
-        className={`nav relative z-20 lg:flex justify-between items-center  flex-row ${style.mx} py-4 ${scroll?"lg:py-0":''} `}
+        className={`nav relative z-20 lg:flex justify-between items-center  flex-row ${style.mx} py-4 ${scroll?"lg:py-0 ease-in duration-300":''} `}
       >
         <div className="left w-40 lg:w-56">
-          <Link to={`${locale}/`} className=" w-full ">
+          <Link to={`${locale}/`} className=" w-full " >
             <img src={logoSrc} alt="logo" className=" w-full " />
           </Link>
         </div>
@@ -51,7 +68,7 @@ const Header = (props) => {
           items={ ['story', 'span1','menu', 'span1', 'ig','span1', 'contact'] }
           offset={ -150 }
         >
-          <Link to="#story" href="stroy"  className={link1}>
+          <Link to="/#story" href="stroy"  className={link1}>
             <span className={span1} >
               {intl.formatMessage({ id: "Our Story" })}
             </span>
@@ -59,18 +76,18 @@ const Header = (props) => {
 
           <div className="span1"></div>
 
-          <Link to="#menu" href="menu" className={link1}>
+          <Link to="/#menu" href="menu" className={link1}>
             <span className={span1}>{intl.formatMessage({ id: "Menu" })}</span>
           </Link>
 
           <div className="span1"></div>
-          <Link to="#ig" href="ig" className={link1}>
+          <Link to="/#ig" href="ig" className={link1}>
             <span className={span1}>
               {intl.formatMessage({ id: "Follow Us" })}
             </span>
           </Link>
           <div className="span1"></div>
-          <Link to="#contact" href="contact" className={link1}>
+          <Link to="/#contact" href="contact" className={link1}>
             <span className={span1}>
               {intl.formatMessage({ id: "Contact" })}
             </span>
@@ -107,28 +124,28 @@ const Header = (props) => {
           >
             <Link
               onClick={toggleMenu}
-              to="#story" href="story"
+              to="/#story" href="story"
               className={link}
             >
               <span className={span}>
                 {intl.formatMessage({ id: "Our Story" })}
               </span>
             </Link>
-            <Link onClick={toggleMenu} to="#menu" href="menu" className={link}>
+            <Link onClick={toggleMenu} to="/#menu" href="menu" className={link}>
               <span className={span}>
                 {" "}
                 {intl.formatMessage({ id: "Menu" })}{" "}
               </span>
             </Link>
 
-            <Link onClick={toggleMenu} to="#ig" href="ig" className={link}>
+            <Link onClick={toggleMenu} to="/#ig" href="ig" className={link}>
               <span className={span}>
                 {" "}
                 {intl.formatMessage({ id: "Follow Us" })}{" "}
               </span>
             </Link>
 
-            <Link onClick={toggleMenu} to="#contact" href="contact" className={link}>
+            <Link onClick={toggleMenu} to="/#contact" href="contact" className={link}>
               <span className={span}>
                 {intl.formatMessage({ id: "Contact" })}
               </span>

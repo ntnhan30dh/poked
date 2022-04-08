@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReactAudioPlayer from 'react-audio-player';
 
 // styles
 import "../styles/index.scss";
@@ -14,6 +15,7 @@ import Footer from "../components/footer";
 import Story from "../components/story";
 import Menu from "../components/menu";
 import IG from "../components/ig";
+
 
 const IndexPage = () => {
   return (

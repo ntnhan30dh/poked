@@ -11,6 +11,7 @@ import TeriyakiChickenSalad from "../images/menu/TeriyakiChickenSalad.png";
 import MiuChickenSalad from "../images/menu/MiuChickenSalad.png"; 
 import TunaOahuPoke from "../images/menu/TunaOahuPoke.png";
 import ShrimpCevicheGohan from "../images/menu/ShrimpCevicheGohan.png";
+import DIYBowl from "../images/menu/DIYBowl.png";
 
 
 const MenuItem = (props) =>{
@@ -21,7 +22,7 @@ const MenuItem = (props) =>{
         "Teriyaki Chicken":TeriyakiChickeni,
         "Spicy Beef":SpicyBeef,
         "Aloha Salmon":AlohaSalmon,
-        // "DIY Bowl",
+        "DIY Bowl": DIYBowl,
          "New York Salad": NewYorkSalad,
          "California Salad": CaliforniaSalad,
          "Teriyaki Chicken Salad":TeriyakiChickenSalad ,
@@ -31,7 +32,7 @@ const MenuItem = (props) =>{
          }
 const pic = picObj[props.name]?picObj[props.name]:TeriyakiChickeni
      return (
-         <article className="mx-2  border-2 bg-white h-full">
+         <article className="mx-2   bg-white h-full">
          <div className={` `}>
         <img src={pic} alt={props.name} className="" />
         <div className="text p-5 md:p-8 md:p-8 text-center ">

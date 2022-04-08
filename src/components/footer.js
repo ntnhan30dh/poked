@@ -68,8 +68,14 @@ const Footer = () => {
             {intl.formatMessage({ id: "Follow us on" })}
           </h4>
           <ul>
-            <li>PedidosYa</li>
-            <li>Foodpanda</li>
+            <li>
+              <Link to="https://www.pedidosya.com/" target= "_blank">
+              PedidosYa
+              </Link>
+              </li>
+            <li>  <Link to="https://www.foodpanda.com/" target= "_blank">
+            Foodpanda
+              </Link></li>
           </ul>
         </div>
         <div className="hidden lg:block">
@@ -77,7 +83,9 @@ const Footer = () => {
             {intl.formatMessage({ id: "Contact" })}
           </h4>
           <ul>
+            <Link href="mailto: hello@pokedbowls.com"> 
             <li>hello@pokedbowls.com</li>
+            </Link>
           </ul>
         </div>
         <div className="hidden lg:block">
@@ -85,7 +93,10 @@ const Footer = () => {
             {intl.formatMessage({ id: "Become a franchise partner" })}
           </h4>
           <ul>
-            <li>sales@pokedbowls.com</li>
+          <Link href="mailto: sales@pokedbowls.com"> 
+          <li>sales@pokedbowls.com</li>
+            </Link>
+            
           </ul>
         </div>
       </div>
@@ -94,7 +105,9 @@ const Footer = () => {
           {intl.formatMessage({ id: "Contact" })}
         </h4>
         <ul>
-          <li>hello@pokedbowls.com</li>
+        <Link href="mailto: hello@pokedbowls.com"> 
+            <li>hello@pokedbowls.com</li>
+            </Link>
         </ul>
       </div>
       <div className=" lg:hidden mt-12">
@@ -102,12 +115,14 @@ const Footer = () => {
           {intl.formatMessage({ id: "Become a franchise partner" })}
         </h4>
         <ul>
+        <Link href="mailto: sales@pokedbowls.com"> 
           <li>sales@pokedbowls.com</li>
+            </Link>
         </ul>
       </div>
       <div className="mt-12 lg:flex justify-between items-center">
       <div className={` ${style.text.action2}  `}>
-      {intl.formatMessage({ id: " © 2022 All Rights Reserved." })}
+      {intl.formatMessage({ id: "© 2022 All Rights Reserved" })}
       </div>
       <ul className="flex items-center">
         <li className="mr-2 mt-0" >
@@ -122,7 +137,7 @@ const Footer = () => {
         </Link >
           </li>
         <li>
-        <Link to="/disclaimer" className="">
+        <Link to="/cookies" className="">
           {intl.formatMessage({ id: "Disclaimer" })}
         </Link >
           </li>
