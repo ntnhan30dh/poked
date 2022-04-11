@@ -3,7 +3,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 
 import "../styles/index.scss"
-import 'semantic-ui-css/semantic.min.css'
+//import 'semantic-ui-css/semantic.min.css'
 
 import {MenuProvider} from "../components/context/menuContext"
 import {StyleProvider} from "../components/context/styleContext"
