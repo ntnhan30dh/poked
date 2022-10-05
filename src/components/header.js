@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { useIntl } from "gatsby-plugin-intl";
-import Scrollspy from 'react-scrollspy'
-import useSound from 'use-sound';
-
 import logo from "../images/logo.png";
-import sound from "../components/sound/sound.m4a"
-
 import { useMenu, useMenuUpdate } from "./context/menuContext";
 import { useStyle } from "./context/styleContext";
 import OrderNow from "./orderNow";
@@ -15,28 +10,17 @@ const Header = (props) => {
   const menuState = useMenu();
   const toggleMenu = useMenuUpdate();
   const style = useStyle();
-  const [play] = useSound(sound,{
-    // `interrupt` ensures that if the sound starts again before it's
-    // ended, it will truncate it. Otherwise, the sound can overlap.
-    interrupt: true,
-  });
   const intl = useIntl();
   const locale = intl.locale !== "en" ? `/${intl.locale}` : "";
 
   const [scroll, setScroll] = useState(false);
 
-  // const handleClick = () => {
-  //  play()
-  // }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
     });
-    // if (scroll) {
-    //   play() 
-    // }
-    //play() 
+    
 
   }, []);
 
@@ -62,7 +46,7 @@ const Header = (props) => {
         </div>
         {/* desktop */}
 
-        <Scrollspy
+        <div
           className={` desktop hidden lg:flex items-center justify-between w-3/4 h-full `}
           currentClassName="font-bold current"
           items={ ['story', 'span1','menu', 'span1', 'ig','span1', 'contact'] }
@@ -111,13 +95,13 @@ const Header = (props) => {
             </Link>
           </div>
           <OrderNow padding="py-4 px-6" />
-        </Scrollspy>
+        </div>
 
         {/* mobile  */}
         <div
           className={` mobile header_rightDiv relative z-10  hidden  justify-center  h-screen w-full //absolute top-0 right-0  ${menuActive} `}
         >
-          <Scrollspy className=" relative z-20 flex flex-col justify-around lg:hidden mt-1/10 /mb-1/3 h-3/4 w-full "
+          <div className=" relative z-20 flex flex-col justify-around lg:hidden mt-1/10 /mb-1/3 h-3/4 w-full "
           currentClassName="font-bold current"
           items={ ['story', 'menu',  'ig', 'contact'] }
           offset={ -150 }
@@ -169,7 +153,7 @@ const Header = (props) => {
               </Link>
             </div>
             <OrderNow padding="py-4 w-full" />
-          </Scrollspy>
+          </div>
           <div className="icons absolute z-10 top-0 right-0 w-full h-full grid grid-cols-4 grid-rows-10">
             <div className="row-start-2  ...">
               <svg
